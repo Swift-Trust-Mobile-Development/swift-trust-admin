@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.left-panel {
+  flex: 1;
+  background: url('../../assets/img/side.png') no-repeat center center;
+  background-size: cover;
+  min-height: 100%;
+}
+
+.right-panel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: #f9f9f9;
+}
+
+.form-wrapper {
+  width: 100%;
+  max-width: 400px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+h2 span {
+  color: #222;
+  font-weight: 500;
+}
+
+p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  padding: 12px;
+  background-color: #007a34;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #005f27;
+}
+
+.forgot {
+  text-align: center;
+  display: block;
+  font-size: 14px;
+  color: #007a34;
+  text-decoration: none;
+}
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+  color: #aaa;
+  font-size: 12px;
+}
+
+.forgot-panel {
+  order: 2; /* Put it on the right for visual consistency */
+}

@@ -13022,6 +13022,10 @@ textarea.form-control-lg {
   max-height: 33px;
   line-height: 0.8;
 }
+.message-link{
+  text-decoration: none;
+  color: inherit
+}
 .sidebar-brand .brand-link .brand-image-xs {
   float: left;
   width: auto;

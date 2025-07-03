@@ -103,3 +103,18 @@ footer {
 .forgot-panel {
   order: 2; /* Put it on the right for visual consistency */
 }
+
+.btn-link {
+      display: inline-block;
+      background-color: #007a34;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .btn-link:hover {
+      background-color: #005f27;
+    }

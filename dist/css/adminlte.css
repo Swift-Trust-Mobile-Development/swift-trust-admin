@@ -14701,7 +14701,7 @@ html.maximized-card {
   padding: 0.5rem;
   margin-bottom: 1rem;
   color: var(--bs-body-color);
-  background-color: var(--bs-body-bg);
+  background-color: #eceeed;
 }
 .info-box .progress {
   height: 2px;

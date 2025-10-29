@@ -7,31 +7,40 @@
   <link rel="icon" href="/dist/assets/img/icon 2.ico" type="image/x-icon" />
   <link rel="stylesheet" href="/dist/pages/forms/style.css" />
 
-  <!-- Inline fallback styles in case external CSS fails -->
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       background-color: #f8f9fa;
       color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     .container {
       display: flex;
+      flex: 1;
+      flex-direction: row;
       min-height: 100vh;
-      flex-direction: column;
     }
 
+    /* LEFT PANEL (IMAGE SIDE) */
     .left-panel {
-      display: none; /* hidden by default for no-CSS fallback */
+      flex: 1;
+      background: url('/dist/assets/img/login-bg.jpg') no-repeat center center;
+      background-size: cover;
+      display: block;
     }
 
+    /* RIGHT PANEL (FORM SIDE) */
     .right-panel {
       flex: 1;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 2rem;
+      background-color: #f8f9fa;
     }
 
     .form-wrapper {
@@ -81,10 +90,8 @@
       cursor: pointer;
     }
 
-    button:hover,
-    button:focus {
+    button:hover {
       background-color: #0056b3;
-      outline: none;
     }
 
     .forgot {
@@ -107,7 +114,7 @@
       color: #666;
     }
 
-    /* No-JavaScript Warning */
+    /* No-JS Warning */
     noscript {
       display: block;
       margin-top: 1rem;
@@ -119,11 +126,43 @@
       text-align: center;
       font-size: 0.95rem;
     }
+
+    /* 🔹 RESPONSIVENESS */
+    @media (max-width: 992px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left-panel {
+        height: 250px;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .right-panel {
+        padding: 1.5rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .form-wrapper {
+        padding: 1.5rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      input[type="email"],
+      input[type="password"] {
+        font-size: 0.95rem;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="left-panel" role="presentation"></div>
+    <div class="left-panel"></div>
 
     <div class="right-panel">
       <div class="form-wrapper">
@@ -153,16 +192,6 @@
     </div>
   </div>
 
-  <!-- External JS with fallback -->
   <script src="/dist/pages/forms/script.js" defer></script>
-  <script>
-    // Graceful degradation: check if script failed
-    window.addEventListener("error", function (e) {
-      if (e.target.tagName === "SCRIPT") {
-        console.warn("⚠️ Script failed to load:", e.target.src);
-      }
-    }, true);
-  </script>
 </body>
-</html>
 </html>
